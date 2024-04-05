@@ -28,7 +28,7 @@ public class Main {
 
         t1.start();
         try {
-            Thread.sleep(10);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
