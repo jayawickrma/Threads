@@ -2,30 +2,24 @@ package lk.Ijse;
 
 
 public class Main {
-    public static void main(String[] args) {
-        Runnable one=new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 1; i <= 4; i++) {
-                    System.out.println("one");
-                    try {
-                        Thread.sleep(500);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+    public static void main(String[] args) throws InterruptedException {
+        Runnable one= () -> {
+            for (int i = 1; i <= 5; i++) {
+                System.out.println("one");
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
                 }
             }
         };
-        Runnable two =new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 1; i <= 4; i++) {
-                    System.out.println("two");
-                    try {
-                        Thread.sleep(500);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+        Runnable two = () -> {
+            for (int i = 1; i <= 5; i++) {
+                System.out.println("two");
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
                 }
             }
         };
@@ -34,7 +28,7 @@ public class Main {
 
         t1.start();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
