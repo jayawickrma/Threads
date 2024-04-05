@@ -2,17 +2,27 @@ package lk.Ijse;
 
 
 class one extends Thread{
-    public void winchThread(){
+    public void run(){
         for (int i =1 ;i<=5 ;i++){
             System.out.println("one");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
 
 class two extends Thread{
-    public void winchThread(){
+    public void run(){
         for (int i =1 ;i<=5 ;i++){
             System.out.println("two");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
@@ -22,8 +32,12 @@ public class Main {
         one onji =new one();
         two obj2 =new two();
 
-        onji.winchThread();
-        obj2.winchThread();
-
+       onji.start();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        obj2.start();
     }
 }
