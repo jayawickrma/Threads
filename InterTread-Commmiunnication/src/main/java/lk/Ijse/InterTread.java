@@ -11,6 +11,7 @@ class Q{
     public void setNum(int num) {
         System.out.println("Put :"+num);
         this.num = num;
+
     }
 }
 class producer implements Runnable{
