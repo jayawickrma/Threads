@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Thread-priority" />
-        <module name="Syncorized-Keyword" />
-        <module name="Lamda" />
         <module name="ExtendedClass" />
         <module name="Runneble" />
         <module name="join-isAlive" />
+        <module name="Thread-priority" />
+        <module name="Syncorized-Keyword" />
+        <module name="Lamda" />
+        <module name="InterTread-Commmiunnication" />
       </profile>
     </annotationProcessing>
   </component>
