@@ -3,7 +3,7 @@ package lk.Ijse;
 class Q{
     int num;
 
-    public int getNum(int i) {
+    public int getNum() {
         System.out.println("Get :"+num);
         return num;
     }
@@ -42,7 +42,7 @@ class consumer implements Runnable{
     public void run() {
         int i=0;
         while (true){
-            q.getNum(i++);
+            q.getNum();
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
